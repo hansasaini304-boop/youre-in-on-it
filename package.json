@@ -1,0 +1,27 @@
+{
+  "name": "youre-in-on-it",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check": "tsc --noEmit",
+    "verify": "npm run check && npm test && npm run build && node scripts/verify-package.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.7",
+    "@netlify/functions": "6.0.3"
+  },
+  "devDependencies": {
+    "@netlify/zip-it-and-ship-it": "16.6.0",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "fflate": "0.8.3",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}
